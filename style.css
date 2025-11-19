@@ -5,119 +5,109 @@
     padding: 0;
     margin: 0;
 }
+img{
+    max-width: 100%;
+}
+/* wallpapers */
 
-/* img{
- max-width: 100%;
-} */
+.wp-wall {
+    background-image: url(../assets_day1/img/wall.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
 
-/* header */
+.wp-cork {
+    background-image: url(../assets_day1/img/cork.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
 
-header {
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    position: sticky;
-    height: 150px;
-    width: 100%;
+    font-size: 2rem;
+    font-family: "Edu TAS Beginner";
 }
 
-h1 {
-    font-size: 80px;
 
+/* main */
+
+.container{
+    margin: 40px 10%;
+    justify-content: center;
+    gap: 20px;    
 }
 
-/* sfondi */
-.wallpaper-wall {
-    background-image: url(./assets_day1/img/wall.png);
-}
+/* card */
 
-.wallpaper-cork {
-    background-image: url(./assets_day1/img/cork.png);
-}
-
-/* cards */
-
-.card {
-
-    padding: 15px;
-    gap: 10px;
+.card{
+    padding: 10px;
     background-color: white;
-    /* max-height: 350px;*/
-    /* max-width: calc(300px + 30px);  */
-    flex: 1 1 100%;
+    
+    flex-basis: 100%;
+    
+    max-width: 300px;   
+    height: 325px;
+    /* min-height: 350px; */
 }
 
-.card-img {
-    /* width: 300px; */
-    height: 300px;
+.card-img{
+
     object-fit: cover;
+    height: 250px;
+    margin-bottom: 10px;
 }
-
-.position-pin {
+.pin-absolute{
     position: absolute;
-    top: -13px;
+    top: -12px;
     left: calc(50% - 18px);
+
+}
+/* flex */
+
+.flex{
+    display: flex;
 }
 
-.relative {
-    position: relative;
-}
-
-.wrap {
+.wrap{
     flex-wrap: wrap;
 }
 
-/* utilities */
-
-.m-main {
-    margin: 50px 0%;
+.column{
+    flex-direction: column;
 }
 
-
-
-
-/* flexbox */
-
-.flex {
-    display: flex;
+.row{
+    flex-direction: row;
 }
 
 .center {
     justify-content: center;
     align-content: center;
 }
+/* utilities */
 
-/* .col{
-    flex-basis: 100%;
-} */
-
-.column {
-    flex-direction: column;
+.absolute{
+    position: absolute;
 }
-
-.row {
-    flex-direction: row;
+.relative{
+    position: relative;
 }
-
-.gap {
-    gap: 30px;
+.sticky{
+    position: sticky;
 }
-
 
 
 /* responsive tablet */
 @media screen and (min-width: 720px) {
 
-    /* .col{
-        flex-basis: calc(50% - 30px);
-    } */
+   
     .card {
-
-        padding: 15px;
-        gap: 10px;
-        background-color: white;
-        /* max-height: 350px;
-    max-width: calc(300px + 30px); */
-        /* flex-basis: calc(50% - 30px); */
-        flex: 1 1 calc(50% - 30px);
+        flex-basis: calc((100% - 20px) / 2); 
     }
 }
 
@@ -125,17 +115,8 @@ h1 {
 /* responsive large */
 @media screen and (min-width: 1024px) {
 
-    /* .col{
-        flex-basis: calc(33% - 30px);
-    } */
+    
     .card {
-
-        padding: 15px;
-        gap: 10px;
-        background-color: white;
-        /* max-height: 350px;
-    max-width: calc(300px + 30px); */
-        /* flex-basis: calc(33% - 30px); */
-        flex: 1 1 calc(33% - 30px);
+        flex-basis: calc((100% - 40px) / 3);
     }
 }
