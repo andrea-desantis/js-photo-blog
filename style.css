@@ -1,6 +1,6 @@
 /* reset */
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -12,62 +12,63 @@
 
 /* header */
 
-header{
+header {
     padding: 20px;
     position: sticky;
     height: 150px;
     width: 100%;
 }
 
-h1{
+h1 {
     font-size: 80px;
 
 }
 
 /* sfondi */
-.wallpaper-wall{
+.wallpaper-wall {
     background-image: url(./assets_day1/img/wall.png);
 }
 
-.wallpaper-cork{
+.wallpaper-cork {
     background-image: url(./assets_day1/img/cork.png);
 }
 
 /* cards */
 
-.card{
+.card {
 
     padding: 15px;
     gap: 10px;
     background-color: white;
-    height: 350px;
-    /* max-width: calc(300px + 30px); */
+    /* max-height: 350px;*/
+    /* max-width: calc(300px + 30px);  */
+    flex: 1 1 100%;
 }
 
-.card-img{
+.card-img {
     /* width: 300px; */
     height: 300px;
     object-fit: cover;
 }
 
-.position-pin{
+.position-pin {
     position: absolute;
     top: -13px;
     left: calc(50% - 18px);
 }
 
-.relative{
+.relative {
     position: relative;
 }
 
-.wrap{
+.wrap {
     flex-wrap: wrap;
 }
 
 /* utilities */
 
-.m-main{
-    margin: 50px 20%;
+.m-main {
+    margin: 50px 0%;
 }
 
 
@@ -75,43 +76,66 @@ h1{
 
 /* flexbox */
 
-.flex{
+.flex {
     display: flex;
 }
 
-.center{
+.center {
     justify-content: center;
     align-content: center;
 }
 
-.col-100{
+/* .col{
     flex-basis: 100%;
-}
+} */
 
-.column{
+.column {
     flex-direction: column;
 }
-.row{
+
+.row {
     flex-direction: row;
 }
 
-.gap{
+.gap {
     gap: 30px;
 }
 
 
 
 /* responsive tablet */
-@media screen and (min-width: 720px){
-    .col-md-50{
+@media screen and (min-width: 720px) {
+
+    /* .col{
         flex-basis: calc(50% - 30px);
+    } */
+    .card {
+
+        padding: 15px;
+        gap: 10px;
+        background-color: white;
+        /* max-height: 350px;
+    max-width: calc(300px + 30px); */
+        /* flex-basis: calc(50% - 30px); */
+        flex: 1 1 calc(50% - 30px);
     }
 }
 
 
 /* responsive large */
-@media screen and (min-width: 1024px){
-    .col-lg-33{
+@media screen and (min-width: 1024px) {
+
+    /* .col{
         flex-basis: calc(33% - 30px);
+    } */
+    .card {
+
+        padding: 15px;
+        gap: 10px;
+        background-color: white;
+        /* max-height: 350px;
+    max-width: calc(300px + 30px); */
+        /* flex-basis: calc(33% - 30px); */
+        flex: 1 1 calc(33% - 30px);
     }
 }
