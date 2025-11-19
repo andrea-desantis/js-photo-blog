@@ -40,12 +40,14 @@ h1{
     padding: 15px;
     gap: 10px;
     background-color: white;
-    height: 350px
+    height: 350px;
+    /* max-width: calc(300px + 30px); */
 }
 
 .card-img{
-    background-size: cover;
-    
+    /* width: 300px; */
+    height: 300px;
+    object-fit: cover;
 }
 
 .position-pin{
@@ -56,6 +58,10 @@ h1{
 
 .relative{
     position: relative;
+}
+
+.wrap{
+    flex-wrap: wrap;
 }
 
 /* utilities */
@@ -89,5 +95,23 @@ h1{
     flex-direction: row;
 }
 
+.gap{
+    gap: 30px;
+}
 
 
+
+/* responsive tablet */
+@media screen and (min-width: 720px){
+    .col-md-50{
+        flex-basis: calc(50% - 30px);
+    }
+}
+
+
+/* responsive large */
+@media screen and (min-width: 1024px){
+    .col-lg-33{
+        flex-basis: calc(33% - 30px);
+    }
+}
