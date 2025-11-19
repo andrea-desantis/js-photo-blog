@@ -1,0 +1,93 @@
+/* reset */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* img{
+ max-width: 100%;
+} */
+
+/* header */
+
+header{
+    padding: 20px;
+    position: sticky;
+    height: 150px;
+    width: 100%;
+}
+
+h1{
+    font-size: 80px;
+
+}
+
+/* sfondi */
+.wallpaper-wall{
+    background-image: url(./assets_day1/img/wall.png);
+}
+
+.wallpaper-cork{
+    background-image: url(./assets_day1/img/cork.png);
+}
+
+/* cards */
+
+.card{
+
+    padding: 15px;
+    gap: 10px;
+    background-color: white;
+    height: 350px
+}
+
+.card-img{
+    background-size: cover;
+    
+}
+
+.position-pin{
+    position: absolute;
+    top: -13px;
+    left: calc(50% - 18px);
+}
+
+.relative{
+    position: relative;
+}
+
+/* utilities */
+
+.m-main{
+    margin: 50px 20%;
+}
+
+
+
+
+/* flexbox */
+
+.flex{
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-content: center;
+}
+
+.col-100{
+    flex-basis: 100%;
+}
+
+.column{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+
+
+
